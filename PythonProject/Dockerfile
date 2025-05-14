@@ -1,8 +1,11 @@
+# Use the official Python image
+FROM python:3.9
 
-FROM python:3.10
-
+# Set the working directory
 WORKDIR /app
 
-COPY ../mydocker.py/fifa.py .
+# Copy the Python script to the container
+COPY app.py .
 
-CMD ["python", "fifa.py"]
+# Set the default command to run the script
+CMD ["python","app.py"]
